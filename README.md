@@ -1,4 +1,23 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/xXpI7QGh)
+
+# Marcado del parcial 
+Nombre: Maria Jose Almanza Caviedes
+Código Estudiantil: 0000337693
+Despliegue en Vercel: <POR_URL_DEL_PROYECTO>
+
+Este repositorio contiene el backend del parcial (Express). Ver archivos en `src/`.
+Para ejecutar localmente:
+
+1. Copiar `.env.example` a `.env` y ajustar variables.
+2. Instalar dependencias: `npm install`.
+3. Correr en modo desarrollo: `npm run dev` o `npm start`.
+
+Endpoints principales:
+- POST /api/v1/auth  -> body: { email, password }  (credenciales: admin@admin.com / admin)
+- POST /api/v1/pokemonDetails -> header Authorization: Bearer <token>  body: { pokemonName }
+
+Nota: El frontend NO debe comunicarse directamente con PokeAPI. El backend actúa como proxy y controla el acceso con JWT.
+
 # 📝 Enunciado del examen
 
 Vas a construir una **arquitectura de tres capas**:
@@ -8,8 +27,7 @@ Vas a construir una **arquitectura de tres capas**:
 3. **API externa (pokeapi)**  
 
 ⚠️ Importante:  
-Solo el **backend** puede comunicarse con la API externa. El frontend no tiene permiso para hacerlo directamente.  
-
+Solo el **backend** puede comunicarse con la API externa. El frontend no tiene permiso para hacerlo directamente. 
 # Bosquejo de la arquitectura
 <img width="1011" height="303" alt="image" src="https://github.com/user-attachments/assets/18450165-2000-4eb3-ab87-ff9cec1e30c7" />
 
@@ -23,7 +41,6 @@ Solo el **backend** puede comunicarse con la API externa. El frontend no tiene p
      ```
      POST /api/v1/auth
      ```  
-
    - Debe recibir en el **body** un objeto con esta forma:  
 
      ```json
