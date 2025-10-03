@@ -9,6 +9,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Friendly root route so the app doesn't return "Cannot GET /"
 app.get('/', (req, res) => {
@@ -50,6 +51,8 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1', authRoutes);
 app.use('/api/v1', pokemonRoutes);
+// Backwards compatibility: some frontends call /auth instead of /api/v1/auth
+app.use('/', authRoutes);
 
 const PORT = process.env.PORT || 3000;
 
