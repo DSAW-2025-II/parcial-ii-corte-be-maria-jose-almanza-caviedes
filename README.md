@@ -2,8 +2,11 @@
 
 # Marcado del parcial 
 Nombre: Maria Jose Almanza Caviedes
-Código Estudiantil: 0000337693
-Despliegue en Vercel: <POR_URL_DEL_PROYECTO>
+
+Código Estudiantil: 0000337693}
+
+Despliegue en Vercel: https://backend-e8z05dapf-majos-projects-82a87faf.vercel.app/
+
 
 Este repositorio contiene el backend del parcial (Express). Ver archivos en `src/`.
 Para ejecutar localmente:
